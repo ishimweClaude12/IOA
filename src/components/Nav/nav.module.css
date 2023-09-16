@@ -10,13 +10,15 @@
   align-items: center;
   background-color: #f9f9f9;
   border-bottom: 1px solid lightblue;
+  width: 100%;
+  padding: 1rem;
 }
 .list {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
   gap: 18px;
-  margin-right: 4rem;
+  padding-right: 2rem;
 }
 .li {
   text-decoration: none;
@@ -24,7 +26,4 @@
   padding: 0.5rem;
   border-radius: 8px;
   background-color: lightblue;
-}
-.li a .active {
-  background-color: red;
 }
