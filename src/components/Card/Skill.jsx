@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Skill({ text, icon, bg }) {
+export default function Skill({ text, level, bg }) {
   return (
     <>
       <span
@@ -11,7 +11,12 @@ export default function Skill({ text, icon, bg }) {
           fontSize: "10px",
         }}
       >
-        {text} {icon}
+        {text}{" "}
+        <span>
+          {level === "beginner" && "🙂"}
+          {level === "intermediate" && "🤡"}
+          {level === "advanced" && "😎"}
+        </span>
       </span>
     </>
   );

@@ -3,24 +3,29 @@ import img from "../../assets/images/claude.jpg";
 import Skill from "./Skill";
 const skills = [
   {
-    skill: "JavaScript",
+    text: "JavaScript",
     level: "intermediate",
     color: "lightblue",
   },
   {
-    skill: "HTML",
+    text: "HTML",
     level: "advanced",
     color: "lightgreen",
   },
   {
-    skill: "CSS",
+    text: "CSS",
     level: "intermediate",
-    color: "lightyellow",
+    color: "yellow",
   },
   {
-    skill: "Git & Github",
+    text: "Git & Github",
     level: "beginner",
-    color: "lightblack",
+    color: "grey",
+  },
+  {
+    text: "React.js",
+    level: "beginner",
+    color: "cyan",
   },
 ];
 function ImageCard() {
@@ -40,15 +45,10 @@ function ImageCard() {
         </p>
       </div>
       <div>
-        <Skill text="HTML" bg="blue" icon="🤳" />
         {skills.map((skill) => {
-          if ((skill.level = "beginner")) {
-            return <Skill text={skill.skill} bg={skill.color} icon="🤦‍♀️" />;
-          } else if ((skill.level = "intermediate")) {
-            return <Skill text={skill.skill} bg={skill.color} icon="👍" />;
-          } else {
-            return <Skill text={skill.skill} bg={skill.color} icon="✔" />;
-          }
+          return (
+            <Skill text={skill.text} bg={skill.color} level={skill.level} />
+          );
         })}
       </div>
     </div>
