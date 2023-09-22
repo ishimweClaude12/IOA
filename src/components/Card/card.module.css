@@ -2,11 +2,16 @@
   background-color: #f9f9f9;
   padding: 1rem;
   margin: 0 auto 2rem;
-  width: max-content;
+  width: 25%;
   border-radius: 8px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  font-family: sans-serif;
 }
 .img {
-  width: 300px;
+  width: 100%;
   height: 200px;
+}
+.skill {
+  margin: 0.4rem;
+  font-style: oblique;
 }
