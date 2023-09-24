@@ -1,8 +1,11 @@
-import React from "react";
-import Nav from "../components/Nav/Nav";
-import Footer from "../components/Footer/Footer";
+import { useState } from "react";
+import image1 from "../assets/images/1.jpg";
+import image2 from "../assets/images/2.jpg";
 
 export default function Home() {
+  const [imageUrl, setImageUrl] = useState(image1);
+  const [nextDis, setNextDis] = useState(false);
+  const [prevDis, setPrevDis] = useState(true);
   return (
     <>
       <h1
@@ -68,6 +71,64 @@ export default function Home() {
         continue to shape the worlds of philosophy, mathematics, and science to
         this day.
       </p>
+      <div
+        className="carousel "
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <img
+          style={{
+            width: "420px",
+            height: "380px",
+          }}
+          src={imageUrl}
+          alt="street"
+        />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "22rem",
+        }}
+      >
+        <button
+          disabled={prevDis}
+          style={{
+            padding: ".4rem",
+            backgroundColor: "lightblue",
+            border: "none",
+            borderRadius: "4px",
+            margin: "1rem .1rem",
+          }}
+          onClick={() => {
+            setImageUrl(image1);
+            setPrevDis(!prevDis);
+            setNextDis(!nextDis);
+          }}
+        >
+          Prev
+        </button>
+        <button
+          disabled={nextDis}
+          style={{
+            padding: ".4rem",
+            backgroundColor: "lightblue",
+            border: "none",
+            borderRadius: "4px",
+            margin: "1rem .1rem",
+          }}
+          onClick={(e) => {
+            setImageUrl(image2);
+            setNextDis(!nextDis);
+            setPrevDis(!prevDis);
+          }}
+        >
+          Next
+        </button>
+      </div>
     </>
   );
 }
