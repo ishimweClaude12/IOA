@@ -15,6 +15,11 @@ const faqs = [
     title: "What do you think about React in General?",
     content: "React is a Game Changer for web developers.",
   },
+  {
+    title: "How do you plan to succeed in this carreer",
+    content:
+      "By learning as much as I can and getting better everyday. This will make me a better developer and hence help me land a good paying job.",
+  },
 ];
 
 export default function Faq() {

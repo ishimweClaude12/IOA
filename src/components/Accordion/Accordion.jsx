@@ -18,6 +18,7 @@ export default function Accordion({ num, title, content }) {
         <p className={styles.title}>{title}</p>
         <p className={styles.sign}>{isOpen ? "-" : "+"}</p>
       </div>
+      {isOpen && <hr />}
 
       {isOpen && <p className={styles.content}>{content}</p>}
     </div>

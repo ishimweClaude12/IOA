@@ -1,20 +1,26 @@
 .container {
   width: 60%;
-  padding: 4rem;
+  padding: 2rem 4rem;
   font-size: 24px;
   background-color: #f9f9f9;
   border-radius: 8px;
-  margin: 2rem auto;
+  margin: 1rem auto;
+  cursor: pointer;
 }
 .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 .sign {
   font-size: 30px;
 }
 .content {
   padding: 2rem;
+}
+hr {
+  height: 2px;
+  background-color: lightblue;
+  border: none;
 }
