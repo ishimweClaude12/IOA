@@ -22,6 +22,9 @@ const Nav = () => {
           <NavLink className={styles.li} to="/about-me">
             About Me
           </NavLink>
+          <NavLink className={styles.li} to="/faq">
+            FAQs
+          </NavLink>
         </ul>
       </div>
     </div>

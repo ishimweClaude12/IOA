@@ -23,7 +23,7 @@ This was small and mediocre but it really gave a great experience and looking fo
 
 React.js, Vanilla CSS in React.js and react-router-dom package.
 
-# Getting Started with IOA Project
+# Getting Started with This Project
 
 ## Environment Variables
 
@@ -34,7 +34,7 @@ To run this project, you will need to add the following environment variables to
 Once you have cloned or downloaded a zip file for this project, you will have to install all the packages used to make this project. Like react-router-dom, bootstrap and others.
 
 Just run this command in your CMD. npm install.
-It will probably take a while to install all the need packages, but don't just give up yet. When everything is done. You can just start using the project by running 'npm start' if you are a developer like; or 'npm build' for building a deployable version that can be tested.
+It will probably take a while to install all the needed packages, but don't just give up yet. When everything is done. You can just start using the project by running 'npm start' if you are a developer like; or 'npm build' for building a deployable version that can be tested.
 
 Anyway, I am talking too much let's get started !!!!!!
 

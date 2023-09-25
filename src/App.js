@@ -1,4 +1,11 @@
 import React from "react";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Main from "./components/Main/Main";
@@ -11,12 +18,7 @@ import Keeper from "./components/Keeper/Keeper";
 //          Pages
 import Home from "./pages/home";
 import CounterPage from "./pages/counterPage";
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider,
-} from "react-router-dom";
+import Faq from "./pages/faq";
 
 //          Layouts
 import RootLayout from "./layouts/rootLayout";
@@ -33,6 +35,7 @@ function App() {
         <Route path="to-do" element={<ToDo />}></Route>
         <Route path="notes" element={<Keeper />}></Route>
         <Route path="about-me" element={<ImageCard />}></Route>
+        <Route path="faq" element={<Faq />}></Route>
       </Route>
     )
   );
