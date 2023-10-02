@@ -1,13 +1,18 @@
 import styles from "./accordion.module.css";
 
-import React, { useState } from "react";
-
-export default function Accordion({ num, title, content }) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Accordion({
+  num,
+  title,
+  content,
+  currentlyOpen,
+  onCurrentlyOpen,
+}) {
+  const isOpen = num === currentlyOpen;
   return (
     <div
       className={styles.container}
-      onClick={() => setIsOpen((prev) => !prev)}
+      // onClick={() => setIsOpen((prev) => !prev)}
+      onClick={() => onCurrentlyOpen(num)}
       style={{ borderTop: `${isOpen ? "4px solid lightblue" : ""}` }}
     >
       <div

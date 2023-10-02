@@ -6,6 +6,7 @@
   border-radius: 8px;
   margin: 1rem auto;
   cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .top {
   display: flex;

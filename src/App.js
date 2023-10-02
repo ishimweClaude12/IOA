@@ -6,12 +6,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import Main from "./components/Main/Main";
 import ImageCard from "./components/Card/ImageCard";
-import Counter from "./components/Counter/Counter";
-import Form from "./components/Form/Form";
+
 import ToDo from "./components/ToDo/ToDo";
 import Keeper from "./components/Keeper/Keeper";
 
@@ -23,7 +19,7 @@ import Faq from "./pages/faq";
 //          Layouts
 import RootLayout from "./layouts/rootLayout";
 import CounterLayout from "./layouts/counterLayout";
-import Card from "./components/Card/Card";
+
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(

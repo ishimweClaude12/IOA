@@ -1,6 +1,7 @@
 import { useState } from "react";
 import image1 from "../assets/images/1.jpg";
 import image2 from "../assets/images/2.jpg";
+import P from "../components/Card/P";
 
 export default function Home() {
   const [imageUrl, setImageUrl] = useState(image1);
@@ -19,7 +20,7 @@ export default function Home() {
       >
         An essay on René Descartes: The Father of Modern Philosophy
       </h1>
-      <p style={{ fontSize: "18px", padding: "16px" }}>
+      <P maxLen={500} size="24" padding="2">
         René Descartes, a French philosopher, mathematician, and scientist of
         the 17th , is often hailed as the "Father of Modern Philosophy" for his
         groundbreaking contributions to the realms of philosophy, mathematics,
@@ -70,7 +71,7 @@ export default function Home() {
         Sweden. Despite his relatively short life, his ideas and contributions
         continue to shape the worlds of philosophy, mathematics, and science to
         this day.
-      </p>
+      </P>
       <div
         className="carousel "
         style={{

@@ -23,6 +23,7 @@ const faqs = [
 ];
 
 export default function Faq() {
+  const [isCurrentlyOpen, setIsCurrentlyOpen] = useState(null);
   return (
     <div>
       {faqs.map((el, i) => (
@@ -31,6 +32,8 @@ export default function Faq() {
           content={el.content}
           num={i < 9 ? `0${i + 1}` : i + 1}
           title={el.title}
+          currentlyOpen={isCurrentlyOpen}
+          onCurrentlyOpen={setIsCurrentlyOpen}
         />
       ))}
     </div>

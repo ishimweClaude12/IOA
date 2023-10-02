@@ -1,6 +1,8 @@
+import { v4 } from "uuid";
 import styles from "./card.module.css";
 import img from "../../assets/images/claude.jpg";
 import Skill from "./Skill";
+import P from "./P";
 const skills = [
   {
     text: "JavaScript",
@@ -34,20 +36,23 @@ function ImageCard() {
       <img src={img} alt="Myimage" className={styles.img} />
       <div>
         <h1>Claude Ishimwe</h1>
-        <p>
+        <P maxLen="100" bg="blue">
           I am a web developer and a tech enthusiast, willing to learn and solve
-          any challenge that comes my way. Loves playing chess, even though, I
-          am not good.{" "}
-        </p>
-        <p>
-          Listens to music and watches a bunch of movies in my spare time and
-          also plays basketball in the weekends with my friends.
-        </p>
+          any challenge that comes my way. Listens to music and watches a bunch
+          of movies in my spare time and also plays basketball in the weekends
+          with my friends.Loves playing chess, even though, I am not good. Loves
+          swimming and playing basketball
+        </P>
       </div>
       <div>
         {skills.map((skill) => {
           return (
-            <Skill text={skill.text} bg={skill.color} level={skill.level} />
+            <Skill
+              key={v4()}
+              text={skill.text}
+              bg={skill.color}
+              level={skill.level}
+            />
           );
         })}
       </div>
