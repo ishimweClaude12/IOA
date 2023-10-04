@@ -1,9 +1,11 @@
 import styles from "./todo.module.css";
 import React, { useState } from "react";
 import ListItem from "../ListItem/ListItem";
+import ClassCounter from "../ClassCounter/ClassCounter";
 const ToDo = () => {
   const [arr, setArr] = useState([]);
   const [input, setInput] = useState("");
+
   function handleChange(e) {
     const { value } = e.target;
     setInput(value);
@@ -12,7 +14,9 @@ const ToDo = () => {
     setArr((el) => {
       return [...el, input];
     });
+    setInput("");
   }
+
   return (
     <>
       <h1 style={{ fontSize: "24px", padding: "16px" }}>
@@ -25,7 +29,13 @@ const ToDo = () => {
           <h1>To-Do List</h1>
         </div>
         <div>
-          <input type="text" name="task" id="task" onChange={handleChange} />
+          <input
+            type="text"
+            name="task"
+            id="task"
+            onChange={handleChange}
+            value={input}
+          />
           <button onClick={handleClick}>Add</button>
         </div>
         <div>
@@ -35,6 +45,9 @@ const ToDo = () => {
             })}
           </ul>
         </div>
+      </div>
+      <div>
+        <ClassCounter />
       </div>
     </>
   );
